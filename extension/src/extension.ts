@@ -52,8 +52,9 @@ export function activate(context: vscode.ExtensionContext) {
               );
 
               if (selection === "View Dashboard") {
+                const analysisId = response.data.id;
                 vscode.env.openExternal(
-                  vscode.Uri.parse("http://localhost:5173"),
+                  vscode.Uri.parse(`http://localhost:5173/dashboard?id=${analysisId}`),
                 );
               }
 
