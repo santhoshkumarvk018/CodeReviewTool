@@ -92,8 +92,8 @@ export default function Dashboard() {
   }, [location]);
 
   /* ── data fetchers ── */
-  const fetchHistory  = async () => { try { setHistory(await getHistory()); } catch { /* silent */ } }; // eslint-disable-line no-empty
-  const fetchMLStatus = async () => { try { setMlStatus(await getMLStatus()); } catch { /* silent */ } }; // eslint-disable-line no-empty
+  const fetchHistory  = async () => { try { setHistory(await getHistory()); } catch { /* silent */ } };
+  const fetchMLStatus = async () => { try { setMlStatus(await getMLStatus()); } catch { /* silent */ } };
 
   const loadById = async (id) => {
     setLoading(true);
